@@ -17,15 +17,15 @@ autocmd("FileType", {
         vim.opt.mouse = "a"
     end,
 })
-autocmd("BufWritePost", {
+autocmd("BufWritePre", {
     pattern = "*.sol",
     command = "silent! !forge fmt",
 })
-autocmd("BufWritePost", {
+autocmd("BufWritePre", {
     pattern = { "*.js", "*.ts", "*.jsx", "*.tsx" },
-    command = "silent! EslintFixAll",
+    command = "LspEslintFixAll",
 })
 autocmd("InsertLeave", {
     pattern = { "*.js", "*.ts", "*.jsx", "*.tsx" },
-    command = "silent! EslintFixAll",
+    command = "silent! LspEslintFixAll",
 })
