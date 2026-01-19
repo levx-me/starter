@@ -32,6 +32,12 @@ return {
     keys = {
       { "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" }
     },
+
+    {
+      "esmuellert/codediff.nvim",
+      dependencies = { "MunifTanjim/nui.nvim" },
+      cmd = "CodeDiff",
+    }
   }
   -- test new blink
   -- { import = "nvchad.blink.lazyspec" },
